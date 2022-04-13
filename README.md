@@ -13,3 +13,6 @@ Provide the absolute path to a directory which I call the rootDir. The pipeline 
 • Rclone
 • samtools
 • GNU tar
+
+## TODO:
+• Fit repo to Snakemake requirements so this can be linked to their repository of pipelines
