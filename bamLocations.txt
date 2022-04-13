@@ -1,0 +1,3 @@
+/scratch/general/lustre/u0854535/temp
+/scratch/general/lustre/u0854535/temp/bams
+/scratch/general/lustre/u0854535/temp/randomDir

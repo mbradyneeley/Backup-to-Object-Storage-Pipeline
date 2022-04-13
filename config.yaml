@@ -1,0 +1,11 @@
+# cluster.yaml - cluster configuration for snakemake workflow.
+
+rootDirForArchive: "/scratch/general/lustre/u0854535/temp"
+
+__default__:
+        cluster: notchpeak
+        partition: notchpeak-shared-short
+        account: notchpeak-shared-short
+        nodes: 1
+        time: 04:00:00
+
