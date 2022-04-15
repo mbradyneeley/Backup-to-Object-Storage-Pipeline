@@ -9,9 +9,13 @@ Provide the absolute path to a directory which I call the rootDir. The pipeline 
 4. (*Add this functionality from previous tests) Send crams to object storage.
 
 ## Requirements
+
 • Have an Rclone config set up and ready to go
+
 • Rclone
+
 • samtools
+
 • GNU tar
 
 ## TODO:
