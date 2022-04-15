@@ -15,4 +15,4 @@ Provide the absolute path to a directory which I call the rootDir. The pipeline 
 • GNU tar
 
 ## TODO:
-• Fit repo to Snakemake requirements so this can be linked to their repository of pipelines
+• Fit repo to Snakemake requirements so this can be linked to their repository of pipelines: https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html
