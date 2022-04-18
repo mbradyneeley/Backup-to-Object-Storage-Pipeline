@@ -10,13 +10,12 @@ Provide the absolute path to a directory which I call the rootDir. The pipeline 
 
 ## Requirements
 
-• Have an Rclone config set up and ready to go
-
-• Rclone
-
-• samtools
-
-• GNU tar
+* Have an Rclone config set up and ready to go
+  * Here is a helpful link for setting it up with a number of storage services: https://www.chpc.utah.edu/documentation/software/rclone.php 
+* Pipeline Dependencies:
+  * Rclone
+  * samtools
+  * GNU tar
 
 ## TODO:
 • Fit repo to Snakemake requirements so this can be linked to their repository of pipelines: https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html
