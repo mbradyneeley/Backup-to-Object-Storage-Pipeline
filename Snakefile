@@ -5,8 +5,7 @@ rule all:
         "rclone_archive_crams.ok"
 
 # Archives all files that are descendents of "rootDirForArchive" except .bam/.bai
-# TODO:Have a for loop with list of directories to be archived or maybe make a
-# list of directories in config that are iteratively archived.
+# TODO: Make sure the following rule works
 rule archive_files:
     input:
         root=config["rootDirForArchive"]
