@@ -17,7 +17,12 @@ rule archive_files:
     shell:
         """
         ml rclone
-        tar --exclude='*.bam*' -zcvf - {input} | rclone rcat pezz:{input}/testArchive.tar.gz
+        for file in {input.root}/*
+        do
+            fileBase=$(basename $file)
+            fileName=${{fileBase%.*}}
+            tar --exclude='*.bam*' -zcvf - $file | rclone rcat pezz:{input.root}/${{fileName}}.tar.gz
+        done
         """
 
 # Now we find the bams that were excluded in the archive_files step:
