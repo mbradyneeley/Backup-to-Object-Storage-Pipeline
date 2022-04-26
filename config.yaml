@@ -3,7 +3,8 @@
 #rootDirForArchive: "/scratch/general/lustre/u0854535/temp"
 rootDirForArchive: "/scratch/general/lustre/u0854535/temp1"
 
-# temporary directory where crams are stored while being uploaded
+# Make sure the directory you list here exists otherwise you
+# will get an error that the input files are missing
 tempDir: "/scratch/general/lustre/u0854535/crams"
  
 __default__:

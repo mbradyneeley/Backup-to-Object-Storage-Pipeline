@@ -12,6 +12,8 @@ rule archive_files:
         root=config["rootDirForArchive"]
     message:
         "Archiving all files from {input.root} except for .bam/.bai"
+    log:
+        "logs/archiveFiles.log"
     output:
         touch("rsync_archive.ok")
     shell:
@@ -36,6 +38,8 @@ rule find_bams:
         root=config["rootDirForArchive"]
     message:
         "Searching for bams to archive..."
+    log:
+        "logs/findBams.log"
     output:
         "bamsFound.txt" 
     shell:
