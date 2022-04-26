@@ -3,7 +3,7 @@
 ## Overview
 Provide the absolute path to a directory which I call the rootDir. The pipeline proceeds with the following processes using the rootdir:
 
-1. (*Add that this is done for each directory in the rootDir) Archive and compress everything within the rootDir except for bam files and send to the object storage with Rclone.
+1. Archive and compress everything within the rootDir except for bam files and send to the object storage with Rclone.
 2. Find the bams that were skipped in the first step.
 3. Convert all bams to crams.
 4. Send crams to object storage.
