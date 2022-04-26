@@ -55,7 +55,8 @@ rule find_bams:
 rule bam_to_cram:
     input:
         bams="bamsFound.txt",
-        tempDir=config["tempDir"]
+        tempDir=config["tempDir"],
+        ref=config["reference"]
     output:
         touch("conversion_complete.ok")
     message:
@@ -74,7 +75,7 @@ rule bam_to_cram:
             bamName=${{bam%.*}}
             echo $line to ${{DIR}}/${{bamName}}.cram
             samtools view \
-            -T /uufs/chpc.utah.edu/common/home/pezzolesi-group1/resources/GATK/b37/human_g1k_v37_decoy_phix.fasta \
+            -T {input.ref} \
             -C \
             -o ${{DIR}}/${{bamName}}.cram \
             $line

@@ -6,6 +6,7 @@ rootDirForArchive: "/scratch/general/lustre/u0854535/temp1"
 # Make sure the directory you list here exists otherwise you
 # will get an error that the input files are missing
 tempDir: "/scratch/general/lustre/u0854535/crams"
+reference: "/uufs/chpc.utah.edu/common/home/pezzolesi-group1/resources/GATK/b37/human_g1k_v37_decoy_phix.fasta"
  
 __default__:
         cluster: notchpeak
