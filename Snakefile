@@ -1,8 +1,10 @@
 configfile: "./config.yaml"
 
+
 rule all:
     input:
         "rclone_archive_crams.ok"
+
 
 # Archives all files that are descendents of "rootDirForArchive" except .bam/.bai
 # TODO: I think the following rule still archives some bams. Not sure if excludes
