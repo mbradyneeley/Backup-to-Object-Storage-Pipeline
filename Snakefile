@@ -5,7 +5,8 @@ rule all:
         "rclone_archive_crams.ok"
 
 # Archives all files that are descendents of "rootDirForArchive" except .bam/.bai
-# TODO: Make sure the following rule works
+# TODO: I think the following rule still archives some bams. Not sure if excludes
+# extension .bam or if it checks the actual code and soft links don't get excluded...
 rule archive_files:
     input:
         root=config["rootDirForArchive"]
@@ -49,7 +50,8 @@ rule find_bams:
 # TODO: Add DIR to config so user can set temp dir of choice.
 rule bam_to_cram:
     input:
-        bams="bamsFound.txt"
+        bams="bamsFound.txt",
+        tempDir=config["tempDir"]
     output:
         touch("conversion_complete.ok")
     message:
@@ -58,7 +60,7 @@ rule bam_to_cram:
         "logs/cramConversion.log"
     shell:
         """
-        DIR=/scratch/general/lustre/u0854535/crams
+        DIR={input.tempDir}
         echo $DIR
         if [ ! -d "$DIR" ]; then
             mkdir $DIR
@@ -75,14 +77,22 @@ rule bam_to_cram:
         done < {input.bams}
         """
 
+# Send crams to storage then remove crams
 rule send_cram_to_storage:
     input: 
-        "conversion_complete.ok"
+        conversionComplete="conversion_complete.ok",
+        tempDir=config["tempDir"]
     output:
         touch("rclone_archive_crams.ok")
     message:
         "Sending crams to storage"
+    log:
+        "logs/cramToStorage.log"
     shell:
         """
-        rclone copy /scratch/general/lustre/u0854535/crams/ pezz:testCram -v
+        ml rclone
+        OUTPUTDIR={input.tempDir}
+        rclone copy $OUTPUTDIR pezz:testCram -v
+        ls -1 $OUTPUTDIR >> logs/cramToStorage.log
+        rm -r $OUTPUTDIR
         """

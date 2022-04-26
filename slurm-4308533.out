@@ -1,0 +1,39 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 64
+Rules claiming more threads will be scaled down.
+Job counts:
+	count	jobs
+	1	send_cram_to_storage
+	1
+
+[Tue Apr 26 10:25:14 2022]
+Job 0: Sending crams to storage
+
+2022/04/26 10:26:14 INFO  : 
+Transferred:   	    2.476 GiB / 8.766 GiB, 28%, 79.192 MiB/s, ETA 1m21s
+Checks:                 1 / 1, 100%
+Transferred:            0 / 1, 0%
+Elapsed time:       1m0.0s
+Transferring:
+ *     GD007.dedup.realigned.realigned.bqsr.cram: 28% /8.766Gi, 79.190Mi/s, 1m21s
+
+2022/04/26 10:27:14 INFO  : 
+Transferred:   	    7.314 GiB / 8.766 GiB, 83%, 83.041 MiB/s, ETA 17s
+Checks:                 1 / 1, 100%
+Transferred:            0 / 1, 0%
+Elapsed time:       2m0.0s
+Transferring:
+ *     GD007.dedup.realigned.realigned.bqsr.cram: 83% /8.766Gi, 83.030Mi/s, 17s
+
+2022/04/26 10:27:31 INFO  : GD007.dedup.realigned.realigned.bqsr.cram: Copied (replaced existing)
+2022/04/26 10:27:31 INFO  : 
+Transferred:   	    8.766 GiB / 8.766 GiB, 100%, 88.961 MiB/s, ETA 0s
+Checks:                 1 / 1, 100%
+Transferred:            1 / 1, 100%
+Elapsed time:      2m16.6s
+
+Touching output file rclone_archive_crams.ok.
+[Tue Apr 26 10:27:31 2022]
+Finished job 0.
+1 of 1 steps (100%) done

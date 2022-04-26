@@ -1,6 +1,10 @@
 # cluster.yaml - cluster configuration for snakemake workflow.
 
-rootDirForArchive: "/scratch/general/lustre/u0854535/temp"
+#rootDirForArchive: "/scratch/general/lustre/u0854535/temp"
+rootDirForArchive: "/scratch/general/lustre/u0854535/temp1"
+
+# temporary directory where crams are stored while being uploaded
+tempDir: "/scratch/general/lustre/u0854535/crams"
  
 __default__:
         cluster: notchpeak

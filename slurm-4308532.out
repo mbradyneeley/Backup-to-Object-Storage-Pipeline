@@ -1,0 +1,26 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 20
+Job counts:
+	count	jobs
+	1	all
+	1	send_cram_to_storage
+	2
+
+[Tue Apr 26 10:24:57 2022]
+Job 1: Sending crams to storage
+
+Submitted job 1 with external jobid 'Submitted batch job 4308533 on cluster notchpeak'.
+[Tue Apr 26 10:27:57 2022]
+Finished job 1.
+1 of 2 steps (50%) done
+
+[Tue Apr 26 10:27:57 2022]
+localrule all:
+    input: rclone_archive_crams.ok
+    jobid: 0
+
+[Tue Apr 26 10:27:57 2022]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: /uufs/chpc.utah.edu/common/home/u0854535/backup/readFile/.snakemake/log/2022-04-26T102457.244553.snakemake.log
