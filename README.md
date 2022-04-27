@@ -1,4 +1,4 @@
-# Backup to Object Storage Snakemake Pipeline
+# Backup to Object Storage Snakemake Workflow
 
 ## Overview
 Provide the absolute path to a directory which I call the rootDir. The pipeline proceeds with the following processes using the rootdir:
