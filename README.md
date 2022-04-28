@@ -14,7 +14,7 @@ Provide the absolute path to a directory which I call the rootDir. The workflow 
 ## Requirements
 
 * Have an Rclone config set up and ready to go
-  * Here is a helpful link for setting it up with a number of storage services: https://www.chpc.utah.edu/documentation/software/rclone.php 
+  * Here is a helpful link from the University of Utah for setting it up with a variety of storage services: https://www.chpc.utah.edu/documentation/software/rclone.php 
 * Pipeline Dependencies:
   * Rclone
   * samtools
