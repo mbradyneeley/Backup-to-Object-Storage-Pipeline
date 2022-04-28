@@ -50,10 +50,8 @@ rule find_bams:
         """
 
 # TODO: Store crams in a certain way that they are easily tied to the archived folder
-# the bams were excluded from.
-# TODO: Have this log really well. Make a crams folder. Print to log which folder each full path cram
-# is sent to.
-# TODO: Add DIR to config so user can set temp dir of choice.
+# the bams were excluded from. Have this log really well. Make a crams folder. Print
+# to log which folder each full path cram is sent to.
 rule bam_to_cram:
     input:
         bams="bamsFound.txt",

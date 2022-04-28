@@ -1,24 +1,18 @@
 # cluster.yaml - cluster configuration for snakemake workflow.
 
-#rootDirForArchive: "/scratch/general/lustre/u0854535/temp"
+# USE ABSOLUTE PATHS
+# This will be the rootDir that your backup starts on
 rootDirForArchive: "/scratch/general/lustre/u0854535/temp1"
 
-# Make sure the directory you list here exists otherwise you
+# Make sure the directory you list for tempDir exists otherwise you
 # will get an error that the input files are missing
 tempDir: "/scratch/general/lustre/u0854535/crams"
 reference: "/uufs/chpc.utah.edu/common/home/pezzolesi-group1/resources/GATK/b37/human_g1k_v37_decoy_phix.fasta"
  
+# Edit the following according to your workload manager
 __default__:
         cluster: notchpeak
         partition: pezzolesi-np
         account: pezzolesi-np
         nodes: 1
         time: 04:00:00
-
-#__default__:
-#        cluster: notchpeak
-#        partition: notchpeak-shared-short
-#        account: notchpeak-shared-short
-#        nodes: 1
-#        time: 04:00:00
-
